@@ -1,31 +1,42 @@
 # ハンズオン10: D1データベース活用
 
 ## 学習目標
-
 - D1 Databaseの基本操作
 - SQLクエリの実行
 - マイグレーション管理
 - トランザクション処理
-- データベース設計
 
-## 概要
+## カリキュラム構成
 
-このハンズオンでは、D1 Databaseを使ったデータ駆動型アプリケーションを構築します。
-SQLiteベースのデータベースをエッジで活用する方法を学びます。
-
-## 詳細は準備中
-
-このハンズオンの詳細な内容は現在準備中です。
-
-以下のトピックをカバー予定：
+### [Step 1: D1の基礎とセットアップ](./step1-setup.md)
 - D1データベースの作成
-- スキーマ設計とマイグレーション
-- CRUD操作
-- リレーションとJOIN
-- インデックス最適化
+- スキーマ定義
+- 初期データ投入
 
-## サンプルプロジェクト
+### [Step 2: CRUD操作](./step2-crud.md)
+- SELECT, INSERT, UPDATE, DELETE
+- パラメータ化クエリ
+- バッチ処理
 
+### [Step 3: 実践プロジェクト](./step3-practical-project.md)
 - ブログシステム
-- ユーザー管理システム
-- 在庫管理アプリ
+- ユーザー管理
+- リレーションと JOIN
+
+## wrangler.toml設定
+
+\`\`\`toml
+[[d1_databases]]
+binding = "DB"
+database_name = "my-database"
+database_id = "your-database-id"
+\`\`\`
+
+## データベース作成
+
+\`\`\`bash
+wrangler d1 create my-database
+wrangler d1 execute my-database --file=schema.sql
+\`\`\`
+
+👉 [Step 1: D1の基礎とセットアップ](./step1-setup.md)

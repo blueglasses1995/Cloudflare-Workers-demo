@@ -1,30 +1,55 @@
 # ハンズオン08: Durable Objectsでリアルタイム通信
 
 ## 学習目標
-
 - Durable Objectsの基本概念
 - WebSocketを使ったリアルタイム通信
 - ステートフルなアプリケーション
 - チャットアプリケーションの構築
 
-## 概要
+## カリキュラム構成
 
-このハンズオンでは、Durable Objectsを使ってリアルタイムチャットアプリケーションを構築します。
-WebSocketを活用した双方向通信を実装します。
+### [Step 1: Durable Objectsの基礎](./step1-basics.md)
+- Durable Objectsとは
+- 基本的な実装
+- Storageの使用
 
-## 詳細は準備中
+### [Step 2: WebSocket通信](./step2-websocket.md)
+- WebSocketの接続
+- メッセージの送受信
+- 接続管理
 
-このハンズオンの詳細な内容は現在準備中です。
+### [Step 3: リアルタイムチャット](./step3-realtime-chat.md)
+- チャットルームの実装
+- ブロードキャスト機能
+- ユーザー管理
 
-以下のトピックをカバー予定：
-- Durable Objectsの作成
-- WebSocketハンドリング
-- ステートの管理
-- リアルタイムメッセージング
-- マルチユーザー対応
-
-## サンプルプロジェクト
-
-- リアルタイムチャット
+### [Step 4: 実践アプリケーション](./step4-practical-app.md)
 - 協調編集ツール
-- オンラインゲームのロビー
+- ゲームのロビー
+- リアルタイムダッシュボード
+
+## 事前準備
+
+\`\`\`bash
+mkdir durable-objects-demo
+cd durable-objects-demo
+wrangler init
+\`\`\`
+
+## wrangler.toml設定
+
+\`\`\`toml
+name = "durable-objects-demo"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+[[durable_objects.bindings]]
+name = "CHAT_ROOM"
+class_name = "ChatRoom"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["ChatRoom"]
+\`\`\`
+
+👉 [Step 1: Durable Objectsの基礎](./step1-basics.md)

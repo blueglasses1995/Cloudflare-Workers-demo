@@ -1,30 +1,16 @@
 # ハンズオン07: 認証の実装
 
 ## 学習目標
-
 - JWT認証の実装
 - API Key認証
 - セッションベース認証
 - 認可（Authorization）
 - セキュリティベストプラクティス
 
-## 概要
+## カリキュラム構成
+- [Step 1: API Key認証](./step1-api-key.md)
+- [Step 2: JWT認証](./step2-jwt.md)
+- [Step 3: セッション管理](./step3-sessions.md)
+- [Step 4: 認可とロールベースアクセス制御](./step4-authorization.md)
 
-このハンズオンでは、Cloudflare Workersでの認証・認可を実装します。
-JWT、API Key、セッションなど、複数の認証方式を学びます。
-
-## 詳細は準備中
-
-このハンズオンの詳細な内容は現在準備中です。
-
-以下のトピックをカバー予定：
-- JWTの生成と検証
-- API Keyの管理
-- セッション管理
-- 権限ベースのアクセス制御
-- セキュリティヘッダー
-
-## 関連ハンズオン
-
-- [ハンズオン04: Workers KVでのデータ管理](../04-workers-kv/README.md)
-- [ハンズオン05: REST API開発](../05-rest-api/README.md)
+👉 [Step 1から開始](./step1-api-key.md)
